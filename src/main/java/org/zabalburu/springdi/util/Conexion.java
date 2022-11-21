@@ -9,13 +9,13 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Conexion {
-	@Value("com.microsoft.sqlserver.jdbc.SQLServerDriver") 
+	@Value("${clase}") 
 	private String clase;
-	@Value("jdbc:sqlserver://localhost:2000;databaseName=Northwind;TrustServerCertificate=True;")
+	@Value("${url}")
 	private String url;
-	@Value("sa")
+	@Value("${usuario}")
 	private String usuario;
-	@Value("tiger")
+	@Value("${password}")
 	private String password;
 	public String getClase() {
 		return clase;
